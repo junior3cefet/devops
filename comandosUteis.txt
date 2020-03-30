@@ -1,0 +1,8 @@
+#1 - comando para limpar todos os volumes
+docker volume prune
+
+#2 - comando para forçar a rodar sem cache o arquivo do  docker-compose 
+docker-compose -f docker-compose.yml up -d
+
+#3 - Comando para parar todos os containeres
+docker stop $(docker ps -a -q)

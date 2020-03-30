@@ -1,0 +1,23 @@
+version: '3.7'
+
+networks:
+  devops:
+    name: devops
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+
+services:
+  jenkins:
+    image: 'bitnami/jenkins:2'
+    ports:
+      - '80:8080'
+      - '50000:50000'
+    volumes:
+      - 'jenkins_data:/bitnami/jenkins'
+    networks: 
+      - devops
+volumes:
+  jenkins_data:
+    driver: local
