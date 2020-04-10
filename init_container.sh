@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sysctl -w vm.max_map_count=262144
+
 cd gitlab
 docker-compose up -d --force-recreate
 cd ..

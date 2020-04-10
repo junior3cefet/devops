@@ -14,6 +14,7 @@ services:
     command: -Dsonar.ce.javaOpts=-Xmx1192m -Dsonar.web.javaOpts=-Xmx1192m
     restart: unless-stopped
     container_name: sonarqube
+    hostname: sonarqube
     depends_on:
       - sonarqube_db
     ports:

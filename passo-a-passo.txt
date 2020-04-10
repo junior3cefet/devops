@@ -1,0 +1,21 @@
+LINK base: https://linuxhandbook.com/ci-with-gitlab-jenkins-and-sonarqube/
+
+#1 - Primeiro ir no SonarQube em Perfil - My Account - Security e definir um token
+
+#2 - Ir no SonarQube em Administration - Management - Projects e criar um novo projeto e definir nome e key. Salvar o token em algum lugar
+
+#3 - Ir no Gitlab em Perfil - Settings - Access Token e criar um novo token e marcar a opção API. Salvar o token
+
+#4 - Ir no Jenkins em Manage Plugins e instalar
+	- GitLab Hook Plugin
+	- GitLab Plugin
+	- Git
+	- SonarQube Scanner for Jenkins
+
+#5 - Configurar Credentials para Gitlab usar o GItlabApi e passar o token gerado
+
+#6 -Configurar Credentials para sonar usar o SecretText e passar o token
+
+#7 - Configurar conexão no Jenkins para gitlab
+
+#8 - Configurar conexão no Jenkins para sonar
